@@ -1,0 +1,27 @@
+screens :
+
+//menna ibrahiem
+2-login  
+3-sign in 
+4-  home
+    search for book 
+   -categ
+   - popular
+   -(ebooks)
+1- splash screen
+
+
+
+//lojy
+5-menu(drawer)+signout 
+6-profile
+9-book => description
+
+
+
+
+//menna mohammed 
+7-favourite
+8-borrow (notefication)
+10-cat ==> 11- books 
+
