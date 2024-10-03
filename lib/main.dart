@@ -3,6 +3,6 @@ import 'package:libravarse/src/approot.dart';
 
 void main (){
 
-  runApp(const AppRoot());
+  runApp( AppRoot());
 
 }
