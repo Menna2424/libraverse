@@ -19,10 +19,7 @@ class CreateAccountButton extends StatelessWidget {
         child: Center(
           child: Text(
             StringsManager.createNewAccountTextButton,
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              color: Color(0xff155a7b),
-            ),
+            style: Theme.of(context).textTheme.bodyMedium
           ),
         ));
   }

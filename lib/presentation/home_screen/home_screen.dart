@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:libravarse/core/utils/colors_manager.dart';
 import 'package:libravarse/core/utils/routes_manager.dart';
 import 'package:libravarse/core/utils/strings_manager.dart';
 import 'package:libravarse/presentation/Category/category_screen.dart';
@@ -34,11 +35,8 @@ class HomeScreen extends StatelessWidget {
               decoration: InputDecoration(
                 hintText: StringsManager.searchHintText,
                 filled: true,
-                fillColor: Color(0xffa8d5e5),
-                hintStyle: TextStyle(
-                    color: Color(0xff155a7b),
-                    fontWeight: FontWeight.bold,
-                    fontSize: 15),
+                fillColor: Theme.of(context).colorScheme.secondary,
+                hintStyle: Theme.of(context).textTheme.labelMedium,
                 border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(35),
                     borderSide: BorderSide.none),
@@ -46,7 +44,7 @@ class HomeScreen extends StatelessWidget {
                   padding: const EdgeInsets.only(left: 82.0),
                   child: Icon(
                     Icons.search,
-                    color: Color(0xff155a7b),
+                    color: Theme.of(context).colorScheme.primary,
                   ),
                 ),
               ),
@@ -81,8 +79,8 @@ class HomeScreen extends StatelessWidget {
                       count: bookItems.length,
                       axisDirection: Axis.horizontal,
                       effect: WormEffect(
-                        dotColor: Color(0xffa8d5e5),
-                        activeDotColor: Color(0xff155a7b),
+                        dotColor: Theme.of(context).colorScheme.secondary,
+                        activeDotColor: Theme.of(context).colorScheme.primary,
                         dotHeight: 10,
                         dotWidth: 10,
                       ),

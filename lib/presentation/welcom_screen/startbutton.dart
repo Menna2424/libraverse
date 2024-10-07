@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:libravarse/core/utils/colors_manager.dart';
 import 'package:libravarse/core/utils/routes_manager.dart';
 import 'package:libravarse/core/utils/strings_manager.dart';
 
@@ -7,7 +8,7 @@ class StartButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
         style: ElevatedButton.styleFrom(
-            backgroundColor: Color(0xff155a7b),
+            backgroundColor: ColorsManager.blueColor,
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(30))),
         onPressed: () {
@@ -19,7 +20,7 @@ class StartButton extends StatelessWidget {
             children: [
               Text(
                 StringsManager.letsStart,
-                style: TextStyle(color: Colors.white),
+                style: Theme.of(context).textTheme.displayLarge,
               ),
               Icon(
                 Icons.arrow_forward,

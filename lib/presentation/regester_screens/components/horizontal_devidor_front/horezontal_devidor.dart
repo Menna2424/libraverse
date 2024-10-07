@@ -9,7 +9,7 @@ class FrontHorizontalDV extends StatelessWidget {
       child: Container(
           margin: EdgeInsets.only(right: 10),
           child: Divider(
-              color: Color(0xff155a7b),
+              color: Theme.of(context).colorScheme.primary,
               indent: 20,
               thickness: 2)),
     );

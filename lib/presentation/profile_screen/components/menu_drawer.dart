@@ -13,20 +13,17 @@ class MenuDrawer extends StatelessWidget {
           children: <Widget>[
             DrawerHeader(
               decoration: BoxDecoration(
-                color: Color(0xff155a7b),
+                color:Theme.of(context).colorScheme.primary,
               ),
               child: Text(
                 'Menu',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 12,
-                ),
+                style: Theme.of(context).textTheme.labelLarge?.copyWith(color:Colors.white ),
               ),
             ),
             ...menuItems.map((item) {
               return ListTile(
-                leading: Icon(item['icon']),
-                title: Text(item['text']),
+                leading: Icon(item['icon'],color:Theme.of(context).colorScheme.primary ),
+                title: Text(item['text'],style:Theme.of(context).textTheme.displaySmall),
                 onTap: () {
                   ScaffoldMessenger.of(context).showSnackBar(
                     SnackBar(content: Text(item['onTapMessage'])),
@@ -35,8 +32,8 @@ class MenuDrawer extends StatelessWidget {
               );
             }).toList(),
             ListTile(
-              leading: Icon(Icons.brightness_6),
-              title: Text('Change Theme'),
+              leading: Icon(Icons.brightness_6,color: Theme.of(context).colorScheme.primary),
+              title: Text('Change Theme',style:Theme.of(context).textTheme.displaySmall ),
               onTap: () {
                 showThemeDialog(context);
               },

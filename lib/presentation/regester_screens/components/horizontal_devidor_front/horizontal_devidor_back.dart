@@ -9,7 +9,7 @@ class BackHorizontalDV extends StatelessWidget {
       child: Container(
           margin: EdgeInsets.only(left: 10),
           child: Divider(
-              color: Color(0xff155a7b),
+              color: Theme.of(context).colorScheme.primary,
               endIndent: 20,
               thickness: 2)),
     );

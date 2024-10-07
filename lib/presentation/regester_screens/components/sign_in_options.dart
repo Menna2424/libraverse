@@ -16,7 +16,7 @@ class SignInOptions extends StatelessWidget {
           height: 65,
           width: 65,
           decoration: BoxDecoration(
-              color: Color(0xffa8d5e5),
+              color:Theme.of(context).colorScheme.secondary,
               borderRadius: BorderRadius.circular(10)),
           child: Padding(
             padding: const EdgeInsets.all(12.0),
@@ -29,7 +29,7 @@ class SignInOptions extends StatelessWidget {
           height: 65,
           width: 65,
           decoration: BoxDecoration(
-              color: Color(0xffa8d5e5),
+              color: Theme.of(context).colorScheme.secondary,
               borderRadius: BorderRadius.circular(10)),
           child: Icon(Icons.facebook, color: Colors.blue, size: 45),
         ),
@@ -37,7 +37,7 @@ class SignInOptions extends StatelessWidget {
           height: 65,
           width: 65,
           decoration: BoxDecoration(
-              color: Color(0xffa8d5e5),
+              color: Theme.of(context).colorScheme.secondary,
               borderRadius: BorderRadius.circular(10)),
           child: Icon(Icons.apple, color: Colors.black, size: 40),
         ),

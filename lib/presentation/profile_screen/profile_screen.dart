@@ -16,11 +16,7 @@ class ProfileScreen extends StatelessWidget {
         elevation: 0,
         title: Text(
           "PROFILE",
-          style: TextStyle(
-              color: Colors.white,
-              fontWeight: FontWeight.bold,
-              fontSize: 40,
-              letterSpacing: 1.5),
+          style: Theme.of(context).textTheme.labelLarge,
         ),
         centerTitle: true,
         leading: IconButton(
@@ -56,8 +52,8 @@ class ProfileScreen extends StatelessWidget {
                     decoration: BoxDecoration(
                      // color: Color(0xff155a7b),
                       gradient: LinearGradient(
-                        colors: [ Color(0xff78bbdf),
-                          Color(0xff155a7b),],
+                        colors: [ Theme.of(context).colorScheme.secondary,
+                          Theme.of(context).colorScheme.primary,],
                         begin: Alignment.topCenter,
                         end: Alignment.bottomCenter,
                       ),
@@ -94,8 +90,7 @@ class ProfileScreen extends StatelessWidget {
                               icon: info['icon'],
                               text: Text(
                                 info['text'],
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold, fontSize: 19),
+                                style: Theme.of(context).textTheme.labelMedium,
                               ),
                               iconColor: info['iconColor'],
                             ),
@@ -132,8 +127,7 @@ class ProfileScreen extends StatelessWidget {
                           children: [
                             Icon(Icons.logout, color: Colors.red),
                             SizedBox(width: 20),
-                            Expanded(child: Text("Log out",style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 19),)),
+                            Expanded(child: Text("Log out",style: Theme.of(context).textTheme.labelMedium,)),
                           ],
 
                         ),

@@ -14,11 +14,7 @@ SectionName({required this.text,required this.route});
       children: [
         Text(
           text,
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-            color: Color(0xff155a7b),
-            fontSize: 17,
-          ),
+          style:Theme.of(context).textTheme.labelMedium,
         ),
         Spacer(),
 
@@ -30,7 +26,7 @@ SectionName({required this.text,required this.route});
               children: [
                 Text(
                   StringsManager.viewAllButton,
-                  style: TextStyle(color: Colors.grey,fontSize: 12),
+                  style: Theme.of(context).textTheme.headlineSmall,
                 ),
                 Icon(Icons.arrow_forward_ios_outlined,color: Colors.grey,size: 12,)
               ],

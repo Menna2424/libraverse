@@ -38,10 +38,8 @@ class _SignInScreenState extends State<SignInScreen> {
                 Center(
                     child: Text(
                   StringsManager.welcomeBack,
-                  style: TextStyle(
-                      color: Color(0xff155a7b),
-                      fontSize: 30,
-                      fontWeight: FontWeight.bold),
+                  style:Theme.of(context).textTheme.labelLarge,
+
                 )),
                 SizedBox(
                   height: 15,
@@ -49,7 +47,7 @@ class _SignInScreenState extends State<SignInScreen> {
                 Center(
                     child: Text(
                   StringsManager.signInToYourAccount,
-                  style: TextStyle(color: Color(0xff155a7b), fontSize: 20),
+                  style: Theme.of(context).textTheme.titleSmall
                 )),
                 SizedBox(
                   height: 50,
@@ -59,7 +57,7 @@ class _SignInScreenState extends State<SignInScreen> {
                   decoration: InputDecoration(
                       hintText: StringsManager.userName,
                       filled: true,
-                      fillColor: Color(0xffa8d5e5),
+                      fillColor: Theme.of(context).colorScheme.secondary,
                       hintStyle: TextStyle(color: Colors.black26),
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(20),
@@ -74,7 +72,7 @@ class _SignInScreenState extends State<SignInScreen> {
                   decoration: InputDecoration(
                     hintText: StringsManager.password,
                     filled: true,
-                    fillColor: Color(0xffa8d5e5),
+                    fillColor: Theme.of(context).colorScheme.secondary,
                     hintStyle: TextStyle(color: Colors.black26),
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(20),
@@ -83,7 +81,7 @@ class _SignInScreenState extends State<SignInScreen> {
                       icon: Icon(
                         _obscureText1?
                         Icons.visibility_off:Icons.visibility,
-                        color: Color(0xff155a7b),
+                        color: Theme.of(context).colorScheme.primary,
                       ),
                       onPressed: (){
                         setState(() {
@@ -98,8 +96,7 @@ class _SignInScreenState extends State<SignInScreen> {
                   CheckBoxItem(isCheked),
                   Text(
                     StringsManager.rememberMe,
-                    style: TextStyle(
-                        color: Color(0xff155a7b), fontWeight: FontWeight.w500),
+                    style: Theme.of(context).textTheme.bodySmall
                   ),
                   Spacer(),
                   ForgetPasswordButton(),
@@ -116,7 +113,7 @@ class _SignInScreenState extends State<SignInScreen> {
                     FrontHorizontalDV(),
                     Text(
                       StringsManager.signInOptions,
-                      style: TextStyle(color: Color(0xff155a7b)),
+                      style:Theme.of(context).textTheme.displaySmall
                     ),
                     BackHorizontalDV(),
                   ],
@@ -135,7 +132,7 @@ class _SignInScreenState extends State<SignInScreen> {
 
                     Text(
                       StringsManager.dontHaveAccount,
-                      style: TextStyle(color: Color(0xff155a7b)),
+                        style:Theme.of(context).textTheme.displaySmall
                     ),
                     BackHorizontalDV(),
                   ],

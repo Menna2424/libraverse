@@ -14,7 +14,7 @@ GoButton({required this.text});
       child: ElevatedButton(
 
           style: ElevatedButton.styleFrom(
-
+          padding: EdgeInsets.all(12),
               backgroundColor: Color(0xff155a7b),
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(30))),
@@ -30,9 +30,7 @@ GoButton({required this.text});
                 Text(
 
                   "$text",
-                  style: TextStyle(
-
-                      color: Colors.white,fontSize: 20),
+                  style:Theme.of(context).textTheme.displayLarge
                 ),
               ],
             ),

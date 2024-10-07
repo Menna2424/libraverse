@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:libravarse/core/utils/colors_manager.dart';
 import 'package:libravarse/core/utils/images_manager.dart';
 import 'package:libravarse/core/utils/strings_manager.dart';
 import 'package:libravarse/presentation/welcom_screen/startbutton.dart';
@@ -30,7 +31,7 @@ class WelcomScreen extends StatelessWidget {
                       child: Text(
                     StringsManager.exploreTheWorldAndBeyond,
                     style: TextStyle(
-                        color: Color(0xff155a7b),
+                        color: ColorsManager.blueColor,
                         fontSize: 20,
                         fontWeight: FontWeight.w500),
                   )),

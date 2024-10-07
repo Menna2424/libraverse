@@ -41,10 +41,7 @@ var formKey =GlobalKey<FormState>();
                 Center(
                     child: Text(
                       StringsManager.welcome,
-                      style: TextStyle(
-                          color: Color(0xff155a7b),
-                          fontSize: 30,
-                          fontWeight: FontWeight.bold),
+                      style: Theme.of(context).textTheme.labelLarge
                     )),
                 SizedBox(
                   height: 15,
@@ -52,7 +49,7 @@ var formKey =GlobalKey<FormState>();
                 Center(
                     child: Text(
                       StringsManager.createNewAccountTextButton,
-                      style: TextStyle(color: Color(0xff155a7b), fontSize: 20),
+                      style: Theme.of(context).textTheme.titleSmall
                     )),
                 SizedBox(height: 50,),
                 TextFormField(
@@ -60,7 +57,7 @@ var formKey =GlobalKey<FormState>();
                   decoration: InputDecoration(
                       hintText:StringsManager.enterYourEmailAddressHintText,
                       filled: true,
-                      fillColor: Color(0xffa8d5e5),
+                      fillColor: Theme.of(context).colorScheme.secondary,
                       hintStyle: TextStyle(color: Colors.black26),
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(20),
@@ -75,7 +72,7 @@ var formKey =GlobalKey<FormState>();
                   decoration: InputDecoration(
                     hintText: StringsManager.enterPassword,
                     filled: true,
-                    fillColor: Color(0xffa8d5e5),
+                    fillColor: Theme.of(context).colorScheme.secondary,
                     hintStyle: TextStyle(color: Colors.black26),
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(20),
@@ -84,7 +81,7 @@ var formKey =GlobalKey<FormState>();
                       icon: Icon(
 
                         _obscureText1? Icons.visibility_off :Icons.visibility,
-                        color: Color(0xff155a7b),
+                        color: Theme.of(context).colorScheme.primary,
                       ),
                       onPressed: (){
                         setState(() {
@@ -105,7 +102,7 @@ var formKey =GlobalKey<FormState>();
                   decoration: InputDecoration(
                     hintText: StringsManager.confirmYourPassword,
                     filled: true,
-                    fillColor: Color(0xffa8d5e5),
+                    fillColor: Theme.of(context).colorScheme.secondary,
                     hintStyle: TextStyle(color: Colors.black26),
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(20),
@@ -114,7 +111,7 @@ var formKey =GlobalKey<FormState>();
                       icon: Icon(
 
                         _obscureText2? Icons.visibility_off :Icons.visibility,
-                        color: Color(0xff155a7b),
+                        color: Theme.of(context).colorScheme.primary,
                       ),
                       onPressed: (){
                         setState(() {
@@ -135,8 +132,7 @@ var formKey =GlobalKey<FormState>();
                     CheckBoxItem(isChecked),
                     Text(
                       StringsManager.acceptTermsAndConditions,
-                      style: TextStyle(
-                          color: Color(0xff155a7b), fontWeight: FontWeight.w500),
+                      style: Theme.of(context).textTheme.bodySmall
                     ),
 
 
@@ -148,16 +144,21 @@ var formKey =GlobalKey<FormState>();
                 Row(
                   children: [
                     FrontHorizontalDV(),
-                    Text(StringsManager.alreadyHaveAccount,style: TextStyle(
-                      color: Color(0xff155a7b),
-
-                    )),
+                    Text(StringsManager.alreadyHaveAccount,style: Theme.of(context).textTheme.displaySmall
+                    ),
                     BackHorizontalDV(),
                   ],
                 ),
                 TextButton(onPressed: (){
                   Navigator.pushReplacementNamed(context, RoutesManager.signInRoute);
-                }, child: Text(StringsManager.signIn,style: TextStyle(color:Color(0xff155a7b),fontWeight: FontWeight.bold,fontSize: 20 ),))
+                }, child: Text(StringsManager.signIn,
+                  style:
+
+
+
+Theme.of(context).textTheme.bodyMedium
+
+                ))
 
               ],
             ),
