@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../components/info_column.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class BookScreen extends StatelessWidget {
   @override
@@ -92,7 +93,7 @@ class BookScreen extends StatelessWidget {
                                 Icon(Icons.menu_book, color: Colors.white),
                                 SizedBox(width: 5),
                                 Text(
-                                  "Read Book",
+                                 AppLocalizations.of(context)!.readBook,
                                   style: TextStyle(color: Colors.white, fontSize: 20),
                                 ),
                               ],
@@ -108,7 +109,7 @@ class BookScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      'Rethink',
+                      AppLocalizations.of(context)!.rethink,
                       style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
                     ),
                     SizedBox(width: 10),
@@ -137,9 +138,9 @@ class BookScreen extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    InfoColumn(icon: Icons.calendar_today, title: 'Release', value: '11 / 6 / 2024'),
-                    InfoColumn(icon: Icons.language, title: 'Language', value: 'AR - EN'),
-                    InfoColumn(icon: Icons.pages, title: 'Page Num', value: '450'),
+                    InfoColumn(icon: Icons.calendar_today, title: AppLocalizations.of(context)!.release, value: '11 / 6 / 2024'),
+                    InfoColumn(icon: Icons.language, title: AppLocalizations.of(context)!.language, value: 'AR - EN'),
+                    InfoColumn(icon: Icons.pages, title: AppLocalizations.of(context)!.pagenum, value: '450'),
                   ],
                 ),
                 SizedBox(height: 2),
@@ -152,7 +153,7 @@ class BookScreen extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
 
-                          Center(child: Text( "Download Book", style: TextStyle(fontSize: 20, color: Colors.white))),
+                          Center(child: Text( AppLocalizations.of(context)!.downloadBook, style: TextStyle(fontSize: 20, color: Colors.white))),
                         ],
                       ),
                     ),

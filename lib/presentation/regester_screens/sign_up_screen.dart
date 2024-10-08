@@ -5,6 +5,7 @@ import 'package:libravarse/presentation/regester_screens/components/horizontal_d
 import 'components/checkbox_item.dart';
 import 'components/go_button.dart';
 import 'components/horizontal_devidor_front/horezontal_devidor.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class SignUpScreen extends StatefulWidget {
    SignUpScreen({super.key});
@@ -40,7 +41,7 @@ var formKey =GlobalKey<FormState>();
                 SizedBox(height: 80,),
                 Center(
                     child: Text(
-                      StringsManager.welcome,
+                      AppLocalizations.of(context)!.welcome,
                       style: Theme.of(context).textTheme.labelLarge
                     )),
                 SizedBox(
@@ -48,14 +49,14 @@ var formKey =GlobalKey<FormState>();
                 ),
                 Center(
                     child: Text(
-                      StringsManager.createNewAccountTextButton,
+                     AppLocalizations.of(context)!.createNewAccount,
                       style: Theme.of(context).textTheme.titleSmall
                     )),
                 SizedBox(height: 50,),
                 TextFormField(
                   controller: emailController,
                   decoration: InputDecoration(
-                      hintText:StringsManager.enterYourEmailAddressHintText,
+                      hintText:AppLocalizations.of(context)!.hintEnterYourEmail,
                       filled: true,
                       fillColor: Theme.of(context).colorScheme.secondary,
                       hintStyle: TextStyle(color: Colors.black26),
@@ -70,7 +71,7 @@ var formKey =GlobalKey<FormState>();
                   controller: passwordController,
                   obscureText: _obscureText1,
                   decoration: InputDecoration(
-                    hintText: StringsManager.enterPassword,
+                    hintText: AppLocalizations.of(context)!.hintEnterPassword,
                     filled: true,
                     fillColor: Theme.of(context).colorScheme.secondary,
                     hintStyle: TextStyle(color: Colors.black26),
@@ -100,7 +101,7 @@ var formKey =GlobalKey<FormState>();
                   controller: confirmController,
                   obscureText: _obscureText2,
                   decoration: InputDecoration(
-                    hintText: StringsManager.confirmYourPassword,
+                    hintText: AppLocalizations.of(context)!.hintConfirmYourPassword,
                     filled: true,
                     fillColor: Theme.of(context).colorScheme.secondary,
                     hintStyle: TextStyle(color: Colors.black26),
@@ -131,7 +132,7 @@ var formKey =GlobalKey<FormState>();
                   children: [
                     CheckBoxItem(isChecked),
                     Text(
-                      StringsManager.acceptTermsAndConditions,
+                      AppLocalizations.of(context)!.acceptTermsAnd,
                       style: Theme.of(context).textTheme.bodySmall
                     ),
 
@@ -139,19 +140,19 @@ var formKey =GlobalKey<FormState>();
                   ],
                 ),
                 SizedBox(height: 30,),
-                GoButton(text: StringsManager.createAccount),
+                GoButton(text:AppLocalizations.of(context)!.createAccountbutton),
                 SizedBox(height: 100,),
                 Row(
                   children: [
                     FrontHorizontalDV(),
-                    Text(StringsManager.alreadyHaveAccount,style: Theme.of(context).textTheme.displaySmall
+                    Text(AppLocalizations.of(context)!.alreadyHaveAccount,style: Theme.of(context).textTheme.displaySmall
                     ),
                     BackHorizontalDV(),
                   ],
                 ),
                 TextButton(onPressed: (){
                   Navigator.pushReplacementNamed(context, RoutesManager.signInRoute);
-                }, child: Text(StringsManager.signIn,
+                }, child: Text(AppLocalizations.of(context)!.signInButton,
                   style:
 
 

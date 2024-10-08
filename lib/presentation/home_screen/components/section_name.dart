@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:libravarse/core/utils/strings_manager.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class SectionName extends StatelessWidget {
 String text;
@@ -25,7 +26,7 @@ SectionName({required this.text,required this.route});
             child: Row(
               children: [
                 Text(
-                  StringsManager.viewAllButton,
+                  AppLocalizations.of(context)!.viewAll,
                   style: Theme.of(context).textTheme.headlineSmall,
                 ),
                 Icon(Icons.arrow_forward_ios_outlined,color: Colors.grey,size: 12,)

@@ -11,6 +11,7 @@ import 'components/book_item.dart';
 import 'components/page_title.dart';
 import 'components/section_name.dart';
 import 'models/book_data_object.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class HomeScreen extends StatelessWidget {
   final _pageController1 = PageController(viewportFraction: 0.4);
@@ -33,7 +34,7 @@ class HomeScreen extends StatelessWidget {
             child: TextFormField(
               controller: searchController,
               decoration: InputDecoration(
-                hintText: StringsManager.searchHintText,
+                hintText: AppLocalizations.of(context)!.search,
                 filled: true,
                 fillColor: Theme.of(context).colorScheme.secondary,
                 hintStyle: Theme.of(context).textTheme.labelMedium,
@@ -57,13 +58,14 @@ class HomeScreen extends StatelessWidget {
                 child: Column(
                   children: [
                     SectionName(
-                        text: StringsManager.categorySection,
+                        text: AppLocalizations.of(context)!.category,
                         route: RoutesManager.categoryRoute),
                     SizedBox(height: 30,),
 
                     SizedBox(
                       height: 200,
                       child: PageView.builder(
+
                         padEnds: false,
                         clipBehavior: Clip.none,
                         itemBuilder: (context, index) =>
@@ -86,7 +88,7 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ),
                     SectionName(
-                        text: StringsManager.myLibrarySection,
+                        text:AppLocalizations.of(context)!.myLibrary,
                         route: RoutesManager.myLibraryRoute),
                   SizedBox(height: 30,),
                     SizedBox(
@@ -102,7 +104,7 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ),
                     SectionName(
-                        text: StringsManager.favouriteSection,
+                        text: AppLocalizations.of(context)!.favourite,
                         route: RoutesManager.favouriteRoute),
                     SizedBox(
                       height: 300,

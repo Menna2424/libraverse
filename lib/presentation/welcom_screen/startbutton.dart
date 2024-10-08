@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:libravarse/core/utils/colors_manager.dart';
 import 'package:libravarse/core/utils/routes_manager.dart';
 import 'package:libravarse/core/utils/strings_manager.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class StartButton extends StatelessWidget {
   @override
@@ -19,7 +20,7 @@ class StartButton extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             children: [
               Text(
-                StringsManager.letsStart,
+                AppLocalizations.of(context)!.letsStart,
                 style: Theme.of(context).textTheme.displayLarge,
               ),
               Icon(

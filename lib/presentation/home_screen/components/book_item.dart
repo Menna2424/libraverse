@@ -15,6 +15,7 @@ BookItem({required this.book});
   Widget build(BuildContext context) {
     return Container(
       child: Stack(
+        alignment: Alignment.topLeft,
 
         clipBehavior: Clip.none,
 

@@ -4,6 +4,7 @@ import '../../core/utils/routes_manager.dart';
 import 'components/info_datails.dart';
 import 'components/menu_drawer.dart';
 import 'models/user_info.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 
 
@@ -15,7 +16,7 @@ class ProfileScreen extends StatelessWidget {
         backgroundColor: Color(0xff78bbdf),
         elevation: 0,
         title: Text(
-          "PROFILE",
+          AppLocalizations.of(context)!.profile,
           style: Theme.of(context).textTheme.labelLarge,
         ),
         centerTitle: true,
@@ -127,7 +128,7 @@ class ProfileScreen extends StatelessWidget {
                           children: [
                             Icon(Icons.logout, color: Colors.red),
                             SizedBox(width: 20),
-                            Expanded(child: Text("Log out",style: Theme.of(context).textTheme.labelMedium,)),
+                            Expanded(child: Text(AppLocalizations.of(context)!.logout,style: Theme.of(context).textTheme.labelMedium,)),
                           ],
 
                         ),

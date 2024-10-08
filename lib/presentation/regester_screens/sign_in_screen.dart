@@ -7,6 +7,7 @@ import 'components/go_button.dart';
 import 'components/horizontal_devidor_front/horezontal_devidor.dart';
 import 'components/horizontal_devidor_front/horizontal_devidor_back.dart';
 import 'components/sign_in_options.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class SignInScreen extends StatefulWidget {
 
@@ -37,7 +38,7 @@ class _SignInScreenState extends State<SignInScreen> {
                 ),
                 Center(
                     child: Text(
-                  StringsManager.welcomeBack,
+                  AppLocalizations.of(context)!.welcomeBack,
                   style:Theme.of(context).textTheme.labelLarge,
 
                 )),
@@ -46,7 +47,7 @@ class _SignInScreenState extends State<SignInScreen> {
                 ),
                 Center(
                     child: Text(
-                  StringsManager.signInToYourAccount,
+                  AppLocalizations.of(context)!.signInToYourAccount,
                   style: Theme.of(context).textTheme.titleSmall
                 )),
                 SizedBox(
@@ -55,7 +56,7 @@ class _SignInScreenState extends State<SignInScreen> {
                 TextFormField(
                   controller: nameController,
                   decoration: InputDecoration(
-                      hintText: StringsManager.userName,
+                      hintText: AppLocalizations.of(context)!.hintUserName,
                       filled: true,
                       fillColor: Theme.of(context).colorScheme.secondary,
                       hintStyle: TextStyle(color: Colors.black26),
@@ -70,7 +71,7 @@ class _SignInScreenState extends State<SignInScreen> {
                   controller: passwordcontroller,
                   obscureText: _obscureText1,
                   decoration: InputDecoration(
-                    hintText: StringsManager.password,
+                    hintText: AppLocalizations.of(context)!.hintPassword,
                     filled: true,
                     fillColor: Theme.of(context).colorScheme.secondary,
                     hintStyle: TextStyle(color: Colors.black26),
@@ -95,7 +96,7 @@ class _SignInScreenState extends State<SignInScreen> {
                 Row(children: [
                   CheckBoxItem(isCheked),
                   Text(
-                    StringsManager.rememberMe,
+                    AppLocalizations.of(context)!.rememberMe,
                     style: Theme.of(context).textTheme.bodySmall
                   ),
                   Spacer(),
@@ -104,7 +105,7 @@ class _SignInScreenState extends State<SignInScreen> {
                 SizedBox(
                   height: 30,
                 ),
-                GoButton(text: StringsManager.signIn),
+                GoButton(text: AppLocalizations.of(context)!.signInButton),
                 SizedBox(
                   height: 40,
                 ),
@@ -112,7 +113,7 @@ class _SignInScreenState extends State<SignInScreen> {
                   children: [
                     FrontHorizontalDV(),
                     Text(
-                      StringsManager.signInOptions,
+                      AppLocalizations.of(context)!.signinOptions,
                       style:Theme.of(context).textTheme.displaySmall
                     ),
                     BackHorizontalDV(),
@@ -131,7 +132,7 @@ class _SignInScreenState extends State<SignInScreen> {
                     FrontHorizontalDV(),
 
                     Text(
-                      StringsManager.dontHaveAccount,
+                      AppLocalizations.of(context)!.dontHaveAccount,
                         style:Theme.of(context).textTheme.displaySmall
                     ),
                     BackHorizontalDV(),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../components/theme_dialog.dart';
 import '../models/menu_items.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class MenuDrawer extends StatelessWidget {
   @override
@@ -16,7 +17,7 @@ class MenuDrawer extends StatelessWidget {
                 color:Theme.of(context).colorScheme.primary,
               ),
               child: Text(
-                'Menu',
+               AppLocalizations.of(context)!.menu,
                 style: Theme.of(context).textTheme.labelLarge?.copyWith(color:Colors.white ),
               ),
             ),
@@ -33,7 +34,7 @@ class MenuDrawer extends StatelessWidget {
             }).toList(),
             ListTile(
               leading: Icon(Icons.brightness_6,color: Theme.of(context).colorScheme.primary),
-              title: Text('Change Theme',style:Theme.of(context).textTheme.displaySmall ),
+              title: Text(AppLocalizations.of(context)!.changeTheme,style:Theme.of(context).textTheme.displaySmall ),
               onTap: () {
                 showThemeDialog(context);
               },

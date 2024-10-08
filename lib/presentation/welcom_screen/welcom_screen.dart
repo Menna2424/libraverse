@@ -3,6 +3,7 @@ import 'package:libravarse/core/utils/colors_manager.dart';
 import 'package:libravarse/core/utils/images_manager.dart';
 import 'package:libravarse/core/utils/strings_manager.dart';
 import 'package:libravarse/presentation/welcom_screen/startbutton.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class WelcomScreen extends StatelessWidget {
   @override
@@ -29,7 +30,7 @@ class WelcomScreen extends StatelessWidget {
                 children: [
                   Center(
                       child: Text(
-                    StringsManager.exploreTheWorldAndBeyond,
+                    AppLocalizations.of(context)!.explore,
                     style: TextStyle(
                         color: ColorsManager.blueColor,
                         fontSize: 20,

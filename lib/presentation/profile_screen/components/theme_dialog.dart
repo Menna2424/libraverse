@@ -1,18 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../components/theme_provider.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 void showThemeDialog(BuildContext context) {
   showDialog(
     context: context,
     builder: (BuildContext context) {
       return AlertDialog(
-        title: Text('Choose Theme'),
+        title: Text(AppLocalizations.of(context)!.changeTheme),
         content: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
             ListTile(
-              title: Text('Light'),
+              title: Text(AppLocalizations.of(context)!.light),
               onTap: () {
                 Provider.of<ThemeProvider>(context, listen: false)
                     .setTheme(ThemeMode.light);
@@ -20,7 +21,7 @@ void showThemeDialog(BuildContext context) {
               },
             ),
             ListTile(
-              title: Text('Dark'),
+              title: Text(AppLocalizations.of(context)!.dark),
               onTap: () {
                 Provider.of<ThemeProvider>(context, listen: false)
                     .setTheme(ThemeMode.dark);
@@ -28,7 +29,7 @@ void showThemeDialog(BuildContext context) {
               },
             ),
             ListTile(
-              title: Text('System Default'),
+              title: Text(AppLocalizations.of(context)!.systemDefault),
               onTap: () {
                 Provider.of<ThemeProvider>(context, listen: false)
                     .setTheme(ThemeMode.system);
