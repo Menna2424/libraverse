@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:libravarse/core/utils/routes_manager.dart';
 import 'package:libravarse/core/utils/strings_manager.dart';
 import 'package:libravarse/presentation/regester_screens/components/horizontal_devidor_front/horizontal_devidor_back.dart';
+import 'package:provider/provider.dart';
+import '../../provider/setting_provider.dart';
 import 'components/checkbox_item.dart';
 import 'components/go_button.dart';
 import 'components/horizontal_devidor_front/horezontal_devidor.dart';

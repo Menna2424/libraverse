@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:libravarse/core/utils/colors_manager.dart';
 
 class MyTheme{
-  static final TextTheme commonTextTheme=TextTheme(
+  static  TextTheme commonTextTheme=TextTheme(
       labelLarge:  TextStyle(
           color: ColorsManager.blueColor,
           fontSize: 30,
@@ -41,17 +41,21 @@ class MyTheme{
 
   );
 
-  static final ThemeData lightTheme = ThemeData(
+  static  ThemeData lightTheme = ThemeData(
+    scaffoldBackgroundColor: Colors.white,
     colorScheme: ColorScheme.fromSeed(seedColor: ColorsManager.blueColor,
         primary:ColorsManager.blueColor ,
-        secondary: ColorsManager.lightBlue),
+        secondary: ColorsManager.lightBlue,
+      secondaryContainer: Colors.white,
+
+    ),
     
     
     //welcome
 textTheme:commonTextTheme,
 bottomNavigationBarTheme: BottomNavigationBarThemeData(
 
-
+  backgroundColor: Colors.white,
    selectedItemColor: ColorsManager.blueColor,
   unselectedItemColor: Colors.grey,
   showSelectedLabels: false,
@@ -60,17 +64,22 @@ bottomNavigationBarTheme: BottomNavigationBarThemeData(
 ),
 
   );
-  static final ThemeData darkTheme =ThemeData(
+  static  ThemeData darkTheme =ThemeData(
+    scaffoldBackgroundColor: Colors.black45,
+
     colorScheme: ColorScheme.fromSeed(seedColor: ColorsManager.lightBlue,
         primary:ColorsManager.lightBlue ,
-        secondary: ColorsManager.blueColor),
+        secondary: ColorsManager.blueColor,
+      outline: ColorsManager.blackcolor,
+      inversePrimary: Colors.white,
+
+    ),
 
 
     //welcome
     textTheme: commonTextTheme,
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
-
-
+      backgroundColor: ColorsManager.lightBlue,
       selectedItemColor: ColorsManager.blueColor,
       unselectedItemColor: Colors.grey,
       showSelectedLabels: false,

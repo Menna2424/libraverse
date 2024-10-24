@@ -1,6 +1,7 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:libravarse/core/utils/colors_manager.dart';
 
 import '../Category/category_screen.dart';
 import '../favourite/favourite_screen.dart';
@@ -43,11 +44,11 @@ class _HomeTabState extends State<HomeTab> {
             BottomNavigationBarItem(
                 icon: Icon(Icons.home), label: "home", ),
             BottomNavigationBarItem(
-                icon: Icon(Icons.category), label: "category", ),
+                icon: Icon(Icons.category), label: "category",),
             BottomNavigationBarItem(
-                icon: Icon(Icons.local_library), label: "my library", ),
+                icon: Icon(Icons.local_library), label: "my library",),
             BottomNavigationBarItem(
-                icon: Icon(Icons.favorite), label: "favorite", ),
+                icon: Icon(Icons.favorite), label: "favorite",),
             BottomNavigationBarItem(
                 icon: Icon(Icons.person), label: "profile",),
           ],

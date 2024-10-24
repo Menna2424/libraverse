@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:libravarse/core/utils/colors_manager.dart';
 
 import '../../core/utils/routes_manager.dart';
 import 'components/info_datails.dart';
@@ -13,11 +14,11 @@ class ProfileScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xff78bbdf),
+        backgroundColor:Theme.of(context).colorScheme.secondary ,
         elevation: 0,
         title: Text(
           AppLocalizations.of(context)!.profile,
-          style: Theme.of(context).textTheme.labelLarge,
+          style: Theme.of(context).textTheme.labelLarge!.copyWith(color: ColorsManager.blackcolor),
         ),
         centerTitle: true,
         leading: IconButton(
@@ -31,16 +32,16 @@ class ProfileScreen extends StatelessWidget {
       drawer: MenuDrawer(),
       body: Container(
         decoration: BoxDecoration(
-          color: Colors.grey.shade200,
-          image: DecorationImage(
-            image: AssetImage('assets/1434933_581.jpg'),
-            fit: BoxFit.cover,
-            repeat: ImageRepeat.repeat,
-            colorFilter: ColorFilter.mode(
-              Colors.white.withOpacity(0.4),
-              BlendMode.dstATop,
-            ),
-          ),
+          color: Colors.transparent,
+          // image: DecorationImage(
+          //   image: AssetImage('assets/1434933_581.jpg'),
+          //   fit: BoxFit.cover,
+          //   repeat: ImageRepeat.repeat,
+          //   colorFilter: ColorFilter.mode(
+          //     Colors.white.withOpacity(0.4),
+          //     BlendMode.dstATop,
+          //   ),
+          // ),
         ),
         child: SingleChildScrollView(
           child: Column(
@@ -91,7 +92,7 @@ class ProfileScreen extends StatelessWidget {
                               icon: info['icon'],
                               text: Text(
                                 info['text'],
-                                style: Theme.of(context).textTheme.labelMedium,
+                                style: Theme.of(context).textTheme.labelMedium!.copyWith(color: Theme.of(context).colorScheme.secondary),
                               ),
                               iconColor: info['iconColor'],
                             ),
@@ -114,7 +115,7 @@ class ProfileScreen extends StatelessWidget {
                       child: Container(
                         padding: EdgeInsets.symmetric(vertical: 15, horizontal: 15),
                         decoration: BoxDecoration(
-                          color: Colors.white,
+                          color: Theme.of(context).colorScheme.primary,
                           borderRadius: BorderRadius.circular(12),
                           boxShadow: [
                             BoxShadow(
@@ -128,7 +129,7 @@ class ProfileScreen extends StatelessWidget {
                           children: [
                             Icon(Icons.logout, color: Colors.red),
                             SizedBox(width: 20),
-                            Expanded(child: Text(AppLocalizations.of(context)!.logout,style: Theme.of(context).textTheme.labelMedium,)),
+                            Expanded(child: Text(AppLocalizations.of(context)!.logout,style: Theme.of(context).textTheme.labelMedium!.copyWith(color: Theme.of(context).colorScheme.secondary),)),
                           ],
 
                         ),

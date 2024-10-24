@@ -24,6 +24,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       body: Column(
         children: [
           SizedBox(height: 30),
@@ -37,7 +38,7 @@ class HomeScreen extends StatelessWidget {
                 hintText: AppLocalizations.of(context)!.search,
                 filled: true,
                 fillColor: Theme.of(context).colorScheme.secondary,
-                hintStyle: Theme.of(context).textTheme.labelMedium,
+                hintStyle: Theme.of(context).textTheme.labelMedium!.copyWith(color: ColorsManager.blackcolor),
                 border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(35),
                     borderSide: BorderSide.none),

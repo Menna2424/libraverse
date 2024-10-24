@@ -9,16 +9,20 @@ import 'package:libravarse/presentation/my_library_screen/my_library_screen.dart
 import 'package:libravarse/presentation/profile_screen/profile_screen.dart';
 import 'package:libravarse/presentation/regester_screens/sign_up_screen.dart';
 import 'package:libravarse/presentation/welcom_screen/welcom_screen.dart';
+import 'package:libravarse/provider/setting_provider.dart';
+import 'package:provider/provider.dart';
 import '../core/utils/routes_manager.dart';
 import '../presentation/book_descriprtion/screens/book_screen.dart';
 import '../presentation/profile_screen/components/menu_drawer.dart';
 import '../presentation/regester_screens/sign_in_screen.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 class AppRoot extends StatelessWidget {
-  const AppRoot({super.key});
+   AppRoot({super.key});
 
   @override
   Widget build(BuildContext context) {
+    var provider = Provider.of<SettingsProvider>(context);
+
     return MaterialApp(
       localizationsDelegates: [
      AppLocalizations.delegate,
@@ -29,9 +33,9 @@ class AppRoot extends StatelessWidget {
       supportedLocales:[
         Locale('en'),
         Locale("ar")
-        
+
       ] ,
-      locale: Locale("en"),
+      locale: Locale("ar"),
 
 
       routes: {
@@ -50,8 +54,8 @@ class AppRoot extends StatelessWidget {
     initialRoute: RoutesManager.welcomeRoute,
 debugShowCheckedModeBanner: false,
       theme: MyTheme.lightTheme,
-      darkTheme: ThemeData(),
-themeMode: ThemeMode.light,
+      darkTheme: MyTheme.darkTheme,
+themeMode: ThemeMode.dark,
     );
   }
 }
