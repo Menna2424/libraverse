@@ -17,7 +17,7 @@ class InfoDetails extends StatelessWidget {
     return Container(
       padding: EdgeInsets.symmetric(vertical: 15, horizontal: 15),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: Theme.of(context).colorScheme.primary,
         borderRadius: BorderRadius.circular(12),
         boxShadow: [
           BoxShadow(
@@ -29,7 +29,7 @@ class InfoDetails extends StatelessWidget {
       ),
       child: Row(
         children: [
-          Icon(icon, color: iconColor),
+          Icon(icon, color: Theme.of(context).colorScheme.secondary),
           SizedBox(width: 20),
           Expanded(child: text),
         ],

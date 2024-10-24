@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:libravarse/core/utils/colors_manager.dart';
 import 'package:libravarse/core/utils/routes_manager.dart';
 import 'package:libravarse/core/utils/strings_manager.dart';
 import 'package:libravarse/presentation/Category/category_screen.dart';
@@ -10,6 +11,7 @@ import 'components/book_item.dart';
 import 'components/page_title.dart';
 import 'components/section_name.dart';
 import 'models/book_data_object.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class HomeScreen extends StatelessWidget {
   final _pageController1 = PageController(viewportFraction: 0.4);
@@ -22,6 +24,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       body: Column(
         children: [
           SizedBox(height: 30),
@@ -32,13 +35,10 @@ class HomeScreen extends StatelessWidget {
             child: TextFormField(
               controller: searchController,
               decoration: InputDecoration(
-                hintText: StringsManager.searchHintText,
+                hintText: AppLocalizations.of(context)!.search,
                 filled: true,
-                fillColor: Color(0xffa8d5e5),
-                hintStyle: TextStyle(
-                    color: Color(0xff155a7b),
-                    fontWeight: FontWeight.bold,
-                    fontSize: 15),
+                fillColor: Theme.of(context).colorScheme.secondary,
+                hintStyle: Theme.of(context).textTheme.labelMedium!.copyWith(color: ColorsManager.blackcolor),
                 border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(35),
                     borderSide: BorderSide.none),
@@ -46,7 +46,7 @@ class HomeScreen extends StatelessWidget {
                   padding: const EdgeInsets.only(left: 82.0),
                   child: Icon(
                     Icons.search,
-                    color: Color(0xff155a7b),
+                    color: Theme.of(context).colorScheme.primary,
                   ),
                 ),
               ),
@@ -59,13 +59,14 @@ class HomeScreen extends StatelessWidget {
                 child: Column(
                   children: [
                     SectionName(
-                        text: StringsManager.categorySection,
+                        text: AppLocalizations.of(context)!.category,
                         route: RoutesManager.categoryRoute),
                     SizedBox(height: 30,),
 
                     SizedBox(
                       height: 200,
                       child: PageView.builder(
+
                         padEnds: false,
                         clipBehavior: Clip.none,
                         itemBuilder: (context, index) =>
@@ -81,14 +82,14 @@ class HomeScreen extends StatelessWidget {
                       count: bookItems.length,
                       axisDirection: Axis.horizontal,
                       effect: WormEffect(
-                        dotColor: Color(0xffa8d5e5),
-                        activeDotColor: Color(0xff155a7b),
+                        dotColor: Theme.of(context).colorScheme.secondary,
+                        activeDotColor: Theme.of(context).colorScheme.primary,
                         dotHeight: 10,
                         dotWidth: 10,
                       ),
                     ),
                     SectionName(
-                        text: StringsManager.myLibrarySection,
+                        text:AppLocalizations.of(context)!.myLibrary,
                         route: RoutesManager.myLibraryRoute),
                   SizedBox(height: 30,),
                     SizedBox(
@@ -104,7 +105,7 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ),
                     SectionName(
-                        text: StringsManager.favouriteSection,
+                        text: AppLocalizations.of(context)!.favourite,
                         route: RoutesManager.favouriteRoute),
                     SizedBox(
                       height: 300,

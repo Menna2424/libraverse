@@ -11,7 +11,7 @@ class TextField extends StatelessWidget {
       decoration: InputDecoration(
           hintText: StringsManager.userName,
           filled: true,
-          fillColor: Color(0xffa8d5e5),
+          fillColor: Theme.of(context).colorScheme.secondary,
           hintStyle: TextStyle(color: Colors.black26),
           border:OutlineInputBorder(
               borderRadius: BorderRadius.circular(20),

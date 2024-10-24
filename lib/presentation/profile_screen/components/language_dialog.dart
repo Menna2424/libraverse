@@ -4,43 +4,36 @@ import 'package:provider/provider.dart';
 import '../components/theme_provider.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-void showThemeDialog(BuildContext context) {
+void showlangDialog(BuildContext context) {
   showDialog(
     context: context,
     builder: (BuildContext context) {
       return AlertDialog(
         backgroundColor: Theme.of(context).colorScheme.primary,
-        title: Text(AppLocalizations.of(context)!.changeTheme,style: TextStyle(
-          color: Theme.of(context).colorScheme.outline
+        title: Text(AppLocalizations.of(context)!.chooseLanguage,style: TextStyle(
+            color: Theme.of(context).colorScheme.outline
 
         ),),
         content: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
             ListTile(
-              title: Text(AppLocalizations.of(context)!.light),
+              title: Text(AppLocalizations.of(context)!.arabic),
               onTap: () {
-                Provider.of<SettingsProvider>(context,listen: false).changeTheme(ThemeMode.light);
+                Provider.of<SettingsProvider>(context,listen: false).changeLanguage("ar");
 
                 Navigator.of(context).pop();
               },
             ),
             ListTile(
-              title: Text(AppLocalizations.of(context)!.dark),
+              title: Text(AppLocalizations.of(context)!.english),
               onTap: () {
-                Provider.of<SettingsProvider>(context,listen: false).changeTheme(ThemeMode.dark);
+                Provider.of<SettingsProvider>(context,listen: false).changeLanguage("en");
 
                 Navigator.of(context).pop();
               },
             ),
-            ListTile(
-              title: Text(AppLocalizations.of(context)!.systemDefault),
-              onTap: () {
-                Provider.of<SettingsProvider>(context, listen: false).changeTheme(ThemeMode.system);
-
-                Navigator.of(context).pop();
-              },
-            ),
+            
           ],
         ),
       );

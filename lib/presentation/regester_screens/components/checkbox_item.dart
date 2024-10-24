@@ -14,7 +14,7 @@ class _CheckBoxItemState extends State<CheckBoxItem> {
   @override
   Widget build(BuildContext context) {
     return  Checkbox(
-        activeColor: Color(0xff155a7b),
+        activeColor: Theme.of(context).colorScheme.primary,
         value: widget.isChecked,
         onChanged: (bool? newValue) {
           setState(() {

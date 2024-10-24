@@ -15,6 +15,7 @@ BookItem({required this.book});
   Widget build(BuildContext context) {
     return Container(
       child: Stack(
+        alignment: Alignment.topLeft,
 
         clipBehavior: Clip.none,
 
@@ -32,9 +33,8 @@ BookItem({required this.book});
               decoration: BoxDecoration(
                 gradient: LinearGradient(
                   colors: [
-                    Color(0xff78bbdf),
-                    Color(0xff155a7b),
-                  ],
+                    Theme.of(context).colorScheme.secondary,
+                    Theme.of(context).colorScheme.primary                  ],
                   end: Alignment.bottomCenter,
                   begin: Alignment.topCenter,
                 ),
